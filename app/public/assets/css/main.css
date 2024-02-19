@@ -1,0 +1,1303 @@
+/* CSS principal */
+
+body {
+    font-family: Arial, sans-serif;
+	background-color: #f5f5f5
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/************************************************************* Styles pour le header */
+header {
+      background: linear-gradient(to right, #4290ba, #004040);
+    color: #fff;
+    height: 2%;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+/* Style pour le logo */
+header img {
+    width: 100px;
+}
+
+/* Styles pour la navigation */
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+	justify-content: space-between;
+	
+}
+.header-icons {
+    position: relative;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+
+nav ul {
+    margin-left: auto;
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+/* Styles pour les liens du menu */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s; /* Ajout de la transition pour la couleur du texte */
+	font-size: 1.1rem;
+}
+
+/* couleur du texte au survol */
+nav ul li a:hover {
+    color: #b50000;
+}
+
+
+/* Style pour le lien "direct" lorsque survolé */
+.direct {
+    background-color: red;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s; /* Ajout de la transition */
+}
+
+/* couleur de fond au survol */
+.direct:hover {
+    color: #b50000;
+}
+
+
+
+.right-align {
+   margin-left: 100px;
+}
+
+
+
+/*************************************** Styles pour le menu hamburger */
+.menu-hamburger-container {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: -100px;
+    z-index: 5001;
+}
+
+.menu-icon {
+    display: block;
+    cursor: pointer;
+    /* Ajustez la taille et la couleur du menu icon (hamburger) */
+}
+
+.menu-icon-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white; /* Couleur des barres du menu hamburger */
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Masquer la checkbox */
+.menu-checkbox {
+    display: none;
+}
+
+/* Styles pour le menu déroulant */
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f2f2f2; /* Couleur d'arrière-plan du menu déroulant */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    right: 0;
+    top: 100%;
+    width: 200px;
+    z-index: 5000;
+}
+
+.menu-dropdown li a {
+    color: #4290ba; /* Couleur des liens */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Styles pour les liens lors du survol */
+.menu-dropdown li a:hover {
+    background-color: #4290ba; /* couleur de fond au survol */
+    color: #fff; /* couleur du texte au survol */
+    text-decoration: none;
+    transform: translateX(5px); /* Effet de survol dynamique */
+    transition: 0.3s;
+}
+
+/* Afficher le menu déroulant lorsque la checkbox est cochée */
+.menu-checkbox:checked + .menu-icon + .menu-dropdown {
+    display: block;
+}
+
+
+/* Pour le responsive */
+@media (max-width: 768px) {
+    .search-container {
+        margin-right: 10px; /* Moins d'espace sur les petits écrans */
+    }
+}
+
+
+
+/* Styles de la section de l'index************************************** */
+
+
+
+
+/* News Section */
+.news {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.article {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 40px); /* Calcule la largeur avec un espace entre les articles */
+    margin: 10px; /* Ajoute un peu d'espace entre les articles */
+}
+
+.article:hover {
+    background-color: #e6f7ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+}
+
+.article h2 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+	color: black;
+}
+
+.article p {
+    margin-bottom: 12px;
+
+}
+
+.article img {
+    width: 100%;
+    border-radius: 1px;
+}
+
+.article a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+figcaption {
+  
+  color: #888;
+  font-size:12px;
+  padding:5px;
+}
+
+p {
+  font-size: 12px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.tab {
+    text-align: center;
+    margin: 20px;
+}
+
+.plus-news {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #004040;
+    border-radius: 5px;
+    background-color: #E6F1FD;
+    color: #004040;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.plus-news:hover {
+    background-color: #004040;
+    color: #E6F1FD;
+    transform: scale(1.05);
+}
+
+/**************************** CSS pour l'icône "Ajouter aux favoris" */
+/* Styles généraux pour le bouton */
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button.addToFavorites {
+    background-color: #4290ba; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 5px 10px; /* Espacement intérieur du bouton */
+    border: none; /* Supprimer la bordure */
+    border-radius: 5px; /* Bord arrondi */
+    cursor: pointer; /* Curseur de souris */
+    font-size: 14px; /* Taille de police */
+    display: block; /* Afficher en tant que bloc pour centrer */
+    margin: 20px auto 0; /* Marge automatique pour centrer horizontalement, 0 en haut */
+    width: fit-content; /* Largeur ajustée au contenu */
+}
+
+/* Style pour le bouton "Ajouter aux favoris" lorsqu'il est sélectionné */
+button.addToFavorites:active {
+    background-color: #356b8c; /* Nouvelle couleur de fond lors de la sélection */
+}
+
+/* Style pour le bouton "Ajouter aux favoris" au survol */
+button.addToFavorites:hover {
+    background-color: #45a049; /* Couleur de fond au survol */
+}
+/* Styles spécifiques pour le bouton "Retirer des favoris" */
+button.addToFavorites.remove {
+    background-color: #d3d3d3; /* Gris clair pour le fond */
+    color: red; /* Lettres en rouge */
+}
+
+/* Style pour le bouton "Retirer des favoris" au survol */
+button.addToFavorites.remove:hover {
+    background-color: #a9a9a9; /* Gris foncé pour le fond au survol */
+}
+/* Styles pour le tableau */
+.favorites-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.favorites-container th, .favorites-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.favorites-container th {
+    background-color: #4290ba;
+    color: white;
+}
+.favorites-container img {
+    width: 100px; /* Taille des images */
+}
+/* Style pour le bouton "Supprimer" */
+.favorites-container .btn-remove {
+    background-color: #4290ba; /* Fond bleu */
+    color: red; /* Lettres en rouge */
+    padding: 5px 10px; /* Espacement intérieur du bouton */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bordures arrondies */
+    text-decoration: none; /* Pas de soulignement */
+    display: inline-block; /* Pour appliquer le padding et autres styles de boîte */
+}
+
+/* Style pour le bouton "Supprimer" au survol */
+.favorites-container .btn-remove:hover {
+    background-color: #356b8c; /* Bleu plus foncé pour le fond au survol */
+}
+
+/* Styles pour le panier des favoris */
+.favorites-basket {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.favorites-basket img {
+    width: 50px;
+}
+
+.favorites-basket h3 {
+    margin: 10px 0;
+}
+
+/* Styles pour le bouton "Supprimer" */
+.btn-remove {
+    background-color: blue;
+    color: red;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-remove:hover {
+    background-color: #356b8c;
+}
+
+/* Styles pour les boutons "Ajouter aux favoris" et "Retirer des favoris" */
+button.addToFavorites {
+    /* Styles existants... */
+}
+
+button.addToFavorites.remove {
+    background-color: #d3d3d3;
+    color: red;
+}
+
+button.addToFavorites.remove:hover {
+    background-color: #a9a9a9;
+}
+
+/* Styles pour le tableau des favoris */
+.favorites-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.favorites-container th, .favorites-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.favorites-container th {
+    background-color: #4290ba;
+    color: white;
+}
+
+.favorites-container img {
+    width: 100px;
+}
+
+
+/* Styles pour le panier des favoris */
+.favorites-basket {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.favorites-basket img {
+    width: 50px;
+}
+
+.favorites-basket h3 {
+    margin: 10px 0;
+}
+
+/* Styles pour le bouton "Supprimer" */
+.btn-remove {
+    background-color: blue;
+    color: red;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-remove:hover {
+    background-color: #356b8c;
+}
+
+/* Styles pour les boutons "Ajouter aux favoris" et "Retirer des favoris" */
+button.addToFavorites {
+    /* Styles existants... */
+}
+
+button.addToFavorites.remove {
+    background-color: #d3d3d3;
+    color: red;
+}
+
+button.addToFavorites.remove:hover {
+    background-color: #a9a9a9;
+}
+
+/* Styles pour le tableau des favoris */
+.favorites-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.favorites-container th, .favorites-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.favorites-container th {
+    background-color: #4290ba;
+    color: white;
+}
+
+.favorites-container img {
+    width: 100px;
+}
+
+
+/* Styles pour le panier des favoris */
+.favorites-basket {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.favorites-basket img {
+    width: 100px;
+}
+
+.favorites-basket h3 {
+    margin: 15px 0;
+}
+
+
+
+
+/******************article*/
+
+
+.articlebis-section {
+  text-align: center;
+  background-color: #fff;
+}
+
+.articlebis-title {
+  font-size: 35px;
+  font-weight: bold;
+  margin: 25px 0;
+  line-height: 1.4;
+  text-align: center;
+  color: black;
+}
+
+.imagebis-container {
+  text-align: center;
+  position: relative;
+}
+
+.imagebis-container img {
+  width: 100%;
+  max-height: calc(100vh - 150px);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.details__date {
+  width: 4cm;
+  background-color: #095061;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  bottom: 150px; /*  positionner la date plus haut */
+  transform: translateX(-50%);
+  text-align: center;
+
+}
+.articlebis-content p{
+  margin: 0 20px;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+
+
+.articlebis-content p:first-of-type::first-letter {
+  float: left;
+  font-size: 100px;
+  color: #4290ba;
+  margin-top: 20px;
+  margin-right: 10px;
+  line-height: 60px;
+}
+
+.articlebis-content figcaption {
+  margin-top: 10px;
+  font-size: 10px;
+  
+}
+
+
+.tags {
+  margin-top: 50px;
+  margin-bottom: 50px; /* Ajout d'une marge en bas */
+}
+
+.tags a:first-child,
+.tags span:first-child {
+  color: #fff;
+  background: #870100;
+  border: 1px solid #870100;
+  border-radius: 3px;
+  padding: 6px 16px;
+  margin-right: 5px;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 14px;
+  transition: background-color 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+.tags a {
+  display: inline-block;
+  color: #8f8f8f;
+  padding: 6px 16px;
+  margin-right: 5px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 14px;
+  transition: background-color 0.2s, color 0.2s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tags a:hover {
+  background-color: #870100;
+  color: #fff;
+}
+
+/************************************************************************************historique/
+
+//* Style de base pour le conteneur principal */
+.container {
+    margin-top: 35px;
+    padding: 20px;
+    background-color: #fff; /* Fond en blanc pour contraster avec l'arrière-plan général */
+}
+
+/* Style pour le titre commun des deux colonnes */
+h2.text-center {
+    font-size: 20px; /* Augmentation de la taille de la police pour plus de visibilité */
+    font-weight: 700; /* Police plus épaisse */
+    color: #34568B; /* Couleur sombre pour le contraste */
+    margin-bottom: 1rem; /* Marge en bas pour séparer du contenu des colonnes */
+    text-transform: uppercase; /* Mettre le texte en majuscules */
+    letter-spacing: 1.5px; /* Espacement entre les lettres pour un aspect plus aéré */
+	 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre portée pour un effet de profondeur */
+}
+
+
+/* Style pour la liste d'articles avec une marge et des paddings */
+ul.list-unstyled {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style pour chaque article avec une ombre et un arrondi pour l'élégance */
+ul.list-unstyled li {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9; /* Couleur de fond légère pour chaque article */
+    border-radius: 10px; /* Bords arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour le survol */
+    position: relative;
+    cursor: pointer;
+}
+
+/* Style pour la flèche à droite de chaque article */
+ul.list-unstyled li::after {
+    content: '\203A'; /* Utilisation d'une entité HTML pour la flèche */
+    font-size: 20px;
+    color: #34568B;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Effet de survol pour les articles */
+ul.list-unstyled li:hover {
+    transform: translateY(-5px); /* Légère élévation de l'article */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+}
+
+/* Style pour les liens dans la liste d'articles */
+ul.list-unstyled li a {
+    color: #333; /* Couleur de texte standard */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+/* Style pour le survol des liens */
+ul.list-unstyled li a:hover {
+    text-decoration: none; /* Pas de changement au survol pour garder le design épuré */
+}
+
+/* Responsive design pour s'adapter aux petits écrans */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    h2.text-center {
+        font-size: 22px; /* Taille de police plus petite pour les petits écrans */
+    }
+    
+    ul.list-unstyled li {
+        padding: 10px; /* Padding plus petit pour les petits écrans */
+    }
+}
+
+
+/************************************************************************************Apropos*/
+
+h2 {
+    font-size: 1.3rem;
+    color: #4290ba;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    color: #004040;
+    margin-bottom: 0.5rem;
+}
+
+.date-limite {
+    font-style: italic;
+    color: #6c757d;
+}
+
+article {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+article p {
+    margin-bottom: 1rem; /* Ajoute un espace en dessous de chaque paragraphe */
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 1rem; /* Espace au-dessus de la liste */
+    margin-bottom: 1rem; /* Espace en dessous de la liste */
+}
+
+ul li {
+    font-size: 13px; /* Taille de la police pour les éléments de liste */
+    margin-bottom: 0.5rem;
+}
+
+
+section.bg-light {
+    background-color:transparent;  /* Couleur de fond légère pour la section */
+   /* Bordure subtile pour la section */
+}
+
+/* *********************************************************************************************catégories */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem; /* Taille du titre */
+    position: relative;
+    margin-bottom: 60px; /* Espacement avant le contenu des catégories */
+    color: #004040; /* Couleur du titre */
+    font-weight: bold;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    height: 3px; /* Épaisseur de la ligne */
+    width: 50%; /* Largeur initiale de la ligne */
+    background: #4290ba; /* Couleur de la ligne */
+    bottom: -10px; /* Positionnement sous le titre */
+    left: 25%; /* Position de départ de la ligne */
+    animation: moveLine 2s ease-in-out infinite alternate; /* Animation de la ligne */
+}
+
+@keyframes moveLine {
+    0% { transform: translateX(0); width: 50%; left: 25%; }
+    50% { width: 30%; left: 35%; } /* La ligne se rétrécit et se déplace vers le centre */
+    100% { transform: translateX(20px); width: 50%; left: 25%; } /* La ligne revient à sa position et taille initiales */
+}
+
+.limited-width {
+    max-width: 1100px; /* Largeur maximale souhaitée */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 0 20px; /* Espacement intérieur (facultatif) */
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-item {
+    flex: 0 0 23%; /* Chaque élément prend environ 23% de la largeur */
+    margin: 1%; /* Espacement entre les images */
+    position: relative;
+    overflow: hidden; /* Nécessaire pour l'effet de survol */
+    border-radius: 10px; /* Bordures arrondies */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition pour l'animation */
+}
+
+.category-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Bordures arrondies pour l'image */
+    transition: all 0.3s ease;
+    animation: pulse 2s ease-in-out infinite; /* Animation "pulse" */
+}
+
+
+.category-item:hover img {
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+    opacity: 0.9; /* Légère diminution de l'opacité au survol */
+}
+
+.category-item h5 {
+    position: absolute;
+    top: 10px; /* Position en haut de l'image */
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1rem; /* Taille réduite du titre */
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour le titre */
+}
+
+
+
+/* Animation d'images */
+
+.category-item.prev img {
+    transform-origin: left center;
+    animation: rotateImages 5s linear infinite; /* Animation de rotation continue */
+}
+
+.category-item.next img {
+    transform-origin: right center;
+    animation: rotateImages 5s linear infinite reverse; /* Animation de rotation continue inversée */
+}
+
+@media (max-width: 768px) {
+    .category-item {
+        flex: 0 0 48%; /* 2 images par ligne sur les petits écrans */
+    }
+}
+/* Ajoute un espace entre les boutons "Précédent" et "Suivant" */
+.carousel-control-prev {
+    margin-right: 10px; /* Espace à droite du bouton "Précédent" */
+}
+
+.carousel-control-next {
+    margin-left: 900px; /* Espace à gauche du bouton "Suivant" */
+}
+
+
+/*LN fil info*****************************************************************************/
+
+aside {
+  
+  padding: 20px;
+  padding-top: 40px; /* Ajout du padding vers le haut */
+  border-radius: 5px;
+  margin: 0 auto; /* Centrer le aside horizontalement */
+  max-width: 1300px; /* Limite de largeur pour le contenu */
+  background-color: white;
+  margin-top: 20px;
+}
+
+aside h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+aside h3 {
+  color: #4290ba; /* Couleur bleu clair */
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: normal;
+  padding-bottom: 10px; 
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 15px;
+  align-items: center;
+}
+
+.grid-container p {
+  position: relative;
+  margin-bottom: 40px; 
+  color: #4290ba; /* Couleur bleu-vert */
+  font-size: 15px; /* Taille de police augmentée */
+}
+
+.grid-container p::before {
+  content: "•";
+  color: #800000; /* Couleur bordeaux foncé */
+  font-size: 30px;
+  line-height: 1;
+  margin-right: 10px;
+  vertical-align: middle;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.grid-container p:hover {
+  color: #2e6482; /* Couleur bleu-vert plus clair au survol */
+  text-decoration: underline; /* Souligner au survol */
+}
+
+
+/*LN fil info*/
+
+
+/* LN24 Replay Section */
+.ln24-replay-section {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.ln24-replay-section .line {
+    border-top: 1px solid #000;
+    margin: 20px 0;
+}
+
+.ln24-replay-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.ln24-replay-section video {
+    width: 700px;
+    height: auto;
+  
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .news {
+        grid-template-columns: 1fr;
+    }
+
+    .ln24-replay-section video {
+        width: 100%;
+    }
+}
+
+/**********user.php**************et formulaire.php******************************************/
+/*user.php*/
+.container {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 35px;
+  background-color: #fff; /* Fond en blanc */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #870100;
+}
+
+.profile-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #8f8f8f; /* Police en gris */
+}
+
+.profile-form input[type="text"],
+.profile-form input[type="email"],
+.profile-form input[type="password"],
+.profile-form input[type="date"],
+.profile-form input[type="radio"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+
+.profile-form input[type="radio"] {
+  margin-top: 5px;
+}
+
+.profile-form input[type="text"]:focus,
+.profile-form input[type="email"]:focus,
+.profile-form input[type="password"]:focus,
+.profile-form input[type="date"]:focus,
+.profile-form input[type="radio"]:focus {
+  border-color: #4CAF50;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+button.submit-button {
+  background-color: #276b87;
+}
+
+button.delete-button {
+  background-color: #ff0000;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button.delete-button:hover {
+  background-color: #e60000;
+}
+
+
+.register-section__header {
+  text-align: center;
+  margin-bottom: 8px;
+  padding-top: 30px; /* Décalage vers le bas */
+}
+
+.heading-secondary {
+  font-size: 28px;
+  font-weight: bold;
+  color: #870100;
+  text-align: left; 
+   padding: 30px;
+
+}
+
+.block-user-login-block {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Fond en blanc */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-md-6 {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.form-item {
+  margin-bottom: 20px;
+}
+
+.control-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.control-label.form-required {
+  color: #8f8f8f; /* Police en gris */
+}
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #4290ba;
+}
+
+.option input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.login-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #276b87;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.button:hover {
+  background-color: #327899;
+}
+
+.login-action__link a {
+  color: #4290ba;
+  text-decoration: none;
+}
+
+.login-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.login-links li {
+  margin-bottom: 10px;
+}
+
+.create-account-link,
+.request-password-link {
+  color: #4290ba;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.create-account-link:hover,
+.request-password-link:hover {
+  color: #327899;
+}
+
+.control-label.form-required,
+.control-label.option {
+  color: #8f8f8f; /* Police en gris */
+}
+
+
+/* Style pour les éléments select (listes déroulantes)*/
+.profile-form select {
+    width: 100%; /* Utilise toute la largeur disponible */
+    padding: 12px; /* Ajoute un peu d'espace à l'intérieur */
+    margin-bottom: 15px; /* Espacement avec l'élément suivant */
+    border: 1px solid #ccc; /* Bordure discrète */
+    border-radius: 4px; /* Bords arrondis */
+    background-color: white; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+    font-size: 16px; /* Taille de la police */
+    appearance: none; /* Supprime le style par défaut du navigateur */
+    -webkit-appearance: none; /* Spécifique à WebKit/Blink */
+    -moz-appearance: none; /* Spécifique à Firefox */
+    background: white url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='%23000' d='M7 10l5 5 5-5z'/></svg>") no-repeat;
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Positionne l'icône à droite */
+	background-size: 30px;
+    cursor: pointer; /* Indique qu'il s'agit d'un élément interactif */
+}
+
+/* Style pour les options à l'intérieur de la liste déroulante */
+.profile-form select option {
+    padding: 10px; /* Espacement à l'intérieur des options */
+    background-color: white; /* Couleur de fond des options */
+    color: #333; /* Couleur du texte */
+}
+
+
+
+
+
+/* CSS du footer*************************************************************** */
+
+/* CSS du footer */
+
+.footer {
+    padding: 30px 0;
+}
+
+.footer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.signup-text {
+    font-weight: bold;
+    background-color: #276b87;
+    padding: 10px 20px; /* Augmenter les valeurs de padding pour augmenter la taille */
+    margin-right: 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 18px; /* Augmenter la taille de la police */
+}
+
+
+.signup-text:hover {
+    background-color: #b50000;
+    transform: scale(1.05);
+}
+
+.social-icons img {
+    width: 200px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.column {
+    flex-basis: calc(33.33% - 40px);
+    margin-bottom: 20px;
+}
+
+.column h3 {
+    margin-bottom: 15px;
+	color:#1f607a;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.column ul li {
+    margin-bottom: 8px;
+}
+
+.column ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.column ul li a:hover {
+    color: #004040;
+}
+
+.line-top,
+.line-bottom {
+    
+    border: none;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    margin: 5px 0;
+}
+
+
+.mfooter {
+    background-color: #f2f2f2;
+    color: #4a4a4a;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.mfooter__contact {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.mfooter__contact-text {
+    font-weight: bold;
+    padding: 10px 20px;
+    color: grey;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 12px;
+    margin: 0;
+}
+
+.divider {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.mfooter__menu {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.menu--footer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+	flex-wrap: wrap; 
+}
+
+.menu__list-item {
+    margin-bottom: 10px; /* Ajout de la marge entre les éléments */
+    text-decoration: underline;
+	font-size: 10px;
+	
+}
+
+.menu__list-item a {
+     /* Afficher le lien en tant que bloc pour la mise en forme */
+    color: #4a4a4a;
+    text-decoration: none;
+    transition: color 0.3s;
+	font-size: 10px;
+}
+
+.menu__list-item a:hover {
+    color: #004040;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .column {
+        flex-basis: calc(50% - 40px);
+    }
+}
+
+
